@@ -8,6 +8,7 @@ use Illuminate\Contracts\View\View;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\Admin\TeamRequest;
+use App\Models\Categories;
 
 class TeamController extends Controller
 {
@@ -21,7 +22,9 @@ class TeamController extends Controller
 
     public function create(): View
     {
-        return view('admin.teams.create');
+        $categories = Categories::all()->pluck('name','id');
+
+        return view('admin.teams.create', compact('categories'));
     }
 
     public function store(TeamRequest $request): RedirectResponse
@@ -29,7 +32,7 @@ class TeamController extends Controller
         Team::create($request->validated());
 
         return redirect()->route('admin.teams.index')->with([
-            'message' => 'successfully created !',
+            'message' => '¡Creado Correctamente!',
             'alert-type' => 'success'
         ]);
     }
@@ -43,7 +46,9 @@ class TeamController extends Controller
 
     public function edit(Team $team): View
     {
-        return view('admin.teams.edit', compact('team'));
+        $categories = Categories::all()->pluck('name','id');
+
+        return view('admin.teams.edit', compact('team', 'categories'));
     }
 
     public function update(TeamRequest $request, Team $team): RedirectResponse

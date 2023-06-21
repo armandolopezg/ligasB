@@ -1,5 +1,18 @@
 <?php
 
+use App\Http\Controllers\Admin\GameController;
+use App\Http\Controllers\Admin\PlayerController;
+use App\Http\Controllers\Admin\StandingController;
+use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\UserController;
+
+use App\Http\Controllers\GameController as GameFrontController;
+use App\Http\Controllers\PlayerController as PlayerFrontController;
+use App\Http\Controllers\StandingController as StandingFrontController;
+
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -19,30 +32,30 @@ Route::get('/', function () {
     return redirect()->route('games');
 });
 
-Route::get('games', [\App\Http\Controllers\GameController::class, 'index'])->name('games');
-Route::get('players', [\App\Http\Controllers\PlayerController::class, 'index'])->name('players');
-Route::get('standings', [\App\Http\Controllers\StandingController::class, 'index'])->name('standings');
+Route::get('games', [GameFrontController::class, 'index'])->name('games');
+Route::get('players', [PlayerFrontController::class, 'index'])->name('players');
+Route::get('standings', [StandingFrontController::class, 'index'])->name('standings');
 
 Route::group(['middleware' => ['auth','isAdmin'],'prefix' => 'admin', 'as' => 'admin.'], function() {
-    Route::get('dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard.index');
-    Route::resource('permissions', \App\Http\Controllers\Admin\PermissionController::class);
-    Route::delete('permissions_mass_destroy', [\App\Http\Controllers\Admin\PermissionController::class, 'massDestroy'])->name('permissions.mass_destroy');
-    Route::resource('roles', \App\Http\Controllers\Admin\RoleController::class);
-    Route::delete('roles_mass_destroy', [\App\Http\Controllers\Admin\RoleController::class, 'massDestroy'])->name('roles.mass_destroy');
-    Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
-    Route::delete('users_mass_destroy', [\App\Http\Controllers\Admin\UserController::class, 'massDestroy'])->name('users.mass_destroy');
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::resource('permissions', PermissionController::class);
+    Route::delete('permissions_mass_destroy', [PermissionController::class, 'massDestroy'])->name('permissions.mass_destroy');
+    Route::resource('roles', RoleController::class);
+    Route::delete('roles_mass_destroy', [RoleController::class, 'massDestroy'])->name('roles.mass_destroy');
+    Route::resource('users', UserController::class);
+    Route::delete('users_mass_destroy', [UserController::class, 'massDestroy'])->name('users.mass_destroy');
 
     // team
-    Route::resource('teams', \App\Http\Controllers\Admin\TeamController::class);
-    Route::delete('teams_mass_destroy', [\App\Http\Controllers\Admin\TeamController::class, 'massDestroy'])->name('teams.mass_destroy');
+    Route::resource('teams', TeamController::class);
+    Route::delete('teams_mass_destroy', [TeamController::class, 'massDestroy'])->name('teams.mass_destroy');
 
     // team
-    Route::resource('players', \App\Http\Controllers\Admin\PlayerController::class);
-    Route::delete('players_mass_destroy', [\App\Http\Controllers\Admin\PlayerController::class, 'massDestroy'])->name('players.mass_destroy');
+    Route::resource('players', PlayerController::class);
+    Route::delete('players_mass_destroy', [PlayerController::class, 'massDestroy'])->name('players.mass_destroy');
     
     // team
-    Route::resource('games', \App\Http\Controllers\Admin\GameController::class);
-    Route::delete('games_mass_destroy', [\App\Http\Controllers\Admin\GameController::class, 'massDestroy'])->name('games.mass_destroy');
+    Route::resource('games', GameController::class);
+    Route::delete('games_mass_destroy', [GameController::class, 'massDestroy'])->name('games.mass_destroy');
 });
 
 Auth::routes(['register' => false]);

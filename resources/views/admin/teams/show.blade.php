@@ -10,7 +10,7 @@
         <div class="card">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-               {{ $team->name }}  player 
+               {{ $team->name }}  Jugadores 
                 </h6>
                 <div class="ml-auto">
                     <a href="{{ route('admin.teams.index') }}" class="btn btn-primary">
@@ -46,7 +46,7 @@
             </div>
             <div class="card-footer">
             <h6 class="my-2 font-weight-bold text-primary">
-               {{ $team->name }}  Games 
+               {{ $team->name }}  Partidos 
                 </h6>
             <div class="table-responsive">
                     <table class="table table-bordered table-striped table-hover " cellspacing="0" width="100%">

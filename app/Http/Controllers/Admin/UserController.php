@@ -47,7 +47,7 @@ class UserController extends Controller
         $user->roles()->sync($request->input('roles'));
 
         return redirect()->route('admin.users.index')->with([
-            'message' => 'successfully created !',
+            'message' => '¡Creado Correctamente!',
             'alert-type' => 'success'
         ]);
     }

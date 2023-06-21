@@ -49,7 +49,7 @@
                                         <a href="{{ route('admin.permissions.edit', $permission->id) }}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
-                                        <form onclick="return confirm('are you sure ? ')" class="d-inline" action="{{ route('admin.permissions.destroy', $permission->id) }}" method="POST">
+                                        <form onclick="return confirm('¿Estás Seguro? ')" class="d-inline" action="{{ route('admin.permissions.destroy', $permission->id) }}" method="POST">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger" style="border-top-left-radius: 0;border-bottom-left-radius: 0;">
@@ -91,7 +91,7 @@
         alert('zero selected')
         return
       }
-      if (confirm('are you sure ?')) {
+      if (confirm('¿Estás Seguro?')) {
         $.ajax({
           headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
           method: 'POST',

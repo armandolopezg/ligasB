@@ -31,7 +31,7 @@ class PlayerController extends Controller
         Player::create($request->validated());
 
         return redirect()->route('admin.players.index')->with([
-            'message' => 'successfully created !',
+            'message' => '¡Creado Correctamente!',
             'alert-type' => 'success'
         ]);
     }

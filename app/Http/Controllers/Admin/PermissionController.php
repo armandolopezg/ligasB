@@ -51,7 +51,7 @@ class PermissionController extends Controller
         Permission::create($request->validated());
 
         return redirect()->route('admin.permissions.index')->with([
-            'message' => 'successfully created !',
+            'message' => '¡Creado Correctamente!',
             'alert-type' => 'success'
         ]);
     }
@@ -101,7 +101,7 @@ class PermissionController extends Controller
         $permission->delete();
 
         return redirect()->route('admin.permissions.index')->with([
-            'message' => 'successfully created !',
+            'message' => '¡Creado Correctamente!',
             'alert-type' => 'danger'
         ]);
     }

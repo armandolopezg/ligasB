@@ -31,6 +31,8 @@
                                 </th>
                                 <th>No</th>
                                 <th>Nombre</th>
+                                <th>Categoría</th>
+                                <th>División por Género</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -42,6 +44,8 @@
                                 </td>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $team->name }}</td>
+                                <td>{{ $team->categories->name }}</td>
+                                <td>{{ $team->genre }}</td>
                                 <td>
                                     <div class="btn-group btn-group-sm">
                                         <a href="{{ route('admin.teams.show', $team->id) }}" class="btn btn-warning">
@@ -50,7 +54,7 @@
                                         <a href="{{ route('admin.teams.edit', $team->id) }}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
-                                        <form onclick="return confirm('are you sure ? ')" class="d-inline" action="{{ route('admin.teams.destroy', $team->id) }}" method="POST">
+                                        <form onclick="return confirm('¿Estás Seguro? ')" class="d-inline" action="{{ route('admin.teams.destroy', $team->id) }}" method="POST">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger" style="border-top-left-radius: 0;border-bottom-left-radius: 0;">
@@ -92,7 +96,7 @@
         alert('zero selected')
         return
       }
-      if (confirm('are you sure ?')) {
+      if (confirm('¿Estás seguro?')) {
         $.ajax({
           headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
           method: 'POST',

@@ -9,7 +9,7 @@ class Categories extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $guarded = ['id', 'name', 'created_at', 'updated_at'];
 
     public function teams(){
         return $this->hasMany(Team::class);

@@ -31,7 +31,7 @@ class GameController extends Controller
         Game::create($request->validated());
 
         return redirect()->route('admin.games.index')->with([
-            'message' => 'successfully created !',
+            'message' => '¡Creado Correctamente!',
             'alert-type' => 'success'
         ]);
     }

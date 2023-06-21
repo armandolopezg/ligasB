@@ -31,6 +31,22 @@
                         <label for="name">{{ __('Nombre') }}</label>
                         <input type="text" class="form-control" id="name" placeholder="{{ __('Nombre') }}" name="name" value="{{ old('name') }}" />
                     </div>
+                    <div class="form-group">
+                        <label for="categorie">{{ __('Categoría') }}</label>
+                        <select name="categories_id" id="categorie" class="form-control" required>
+                            @foreach($categories as $id => $categorie)
+                                <option value="{{ $id }}" {{ (in_array($id, old('team', [])) || isset($team) && $team->categories->id == $id) ? 'selected' : '' }}>{{ $categorie }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="genre">{{ __('División por Género') }}</label>
+                        <select name="genre" id="genre" class="form-control" required>
+                            <option value="Femenil">Femenil</option>
+                            <option value="Varonil">Varonil</option>
+                            <option value="Mixto">Mixto</option>
+                        </select>
+                    </div>
                     <button type="submit" class="btn btn-primary btn-block">{{ __('Guardar') }}</button>
                 </form>
             </div>

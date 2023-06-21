@@ -35,7 +35,7 @@
                         <input type="text" class="form-control" id="name" placeholder="{{ __('Nombre') }}" name="name" value="{{ old('name') }}" />
                     </div>
                     <div class="form-group">
-                        <label for="birth_date">{{ __('Cumpleaños') }}</label>
+                        <label for="birth_date">{{ __('Fecha de Nacimiento') }}</label>
                         <input type="date" class="form-control" id="birth_date" placeholder="{{ __('Cumpleaños') }}" name="birth_date" value="{{ old('birth_date') }}" />
                     </div>
                     <div class="form-group">

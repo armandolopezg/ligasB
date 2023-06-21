@@ -28,7 +28,7 @@ class {{ class }} extends Controller
         {{ model }}::create($request->validated());
 
         return redirect()->route('{{ modelVariable }}s.index')->with([
-            'message' => 'successfully created !',
+            'message' => '¡Creado Correctamente!',
             'alert-type' => 'success'
         ]);
     }

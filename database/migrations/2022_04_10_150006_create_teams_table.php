@@ -18,6 +18,7 @@ class CreateTeamsTable extends Migration
             $table->id();
             $table->foreignIdFor(Categories::class)->nullable()->constrained()->cascadeOnDelete();
             $table->string('name');
+            $table->string('genre');
             $table->timestamps();
         });
     }

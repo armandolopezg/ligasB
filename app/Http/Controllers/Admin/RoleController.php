@@ -47,7 +47,7 @@ class RoleController extends Controller
         $role->permissions()->sync($request->input('permissions'));
 
         return redirect()->route('admin.roles.index')->with([
-            'message' => 'successfully created !',
+            'message' => '¡Creado Correctamente!',
             'alert-type' => 'success'
         ]);  
     }
