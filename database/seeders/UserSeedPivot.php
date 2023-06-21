@@ -16,7 +16,7 @@ class UserSeedPivot extends Seeder
     {
         $roles = [
             
-            1 => [
+            2 => [
                 'roles' => [1],
             ],
 

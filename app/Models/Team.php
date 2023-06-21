@@ -19,6 +19,10 @@ class Team extends Model
         return $this->hasMany(Game::class, 'team_id');
     }
 
+    public function categories(){
+        return $this->belongsTo(Categories::class);
+    }
+
     public function getGamesAttribute()
     {
         return Game::where(function($query) {
