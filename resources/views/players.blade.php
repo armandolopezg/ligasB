@@ -1,8 +1,14 @@
-@extends('layouts.client')
+@extends('layouts.cliente')
 
 @section('content')
-<div class="row mt-5 justify-content-center">
-    <div class="col-8 mb-4">
+<div class="row">
+    <div class="col-md-12">
+        <div class="title">
+            <h2>Jugadores</h2>
+            <span>Conoce los jugadores de cada equipo.</span>
+        </div>
+    </div>
+    <div class="col-md-12">
         <div class="card">
             <h5 class="card-header">
               Lista de jugadores

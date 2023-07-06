@@ -1,9 +1,15 @@
-@extends('layouts.client')
+@extends('layouts.cliente')
 
 @section('content')
-<div class="row mt-5 justify-content-center">
-  <div class="col-8 mb-4">
-      <div class="card">
+<div class="row">
+  <div class="col-md-12">
+      <div class="title">
+          <h2>Tabla de Posiciones</h2>
+          <span>Conoce la tabla de posiciones de cada equipo.</span>
+      </div>
+  </div>
+  <div class="col-md-12">
+    <div class="card">
           <h3 class="card-header">
             Tabla de Posiciones
           </h3>
@@ -37,6 +43,6 @@
           </div>
       </div>
   </div>
-
 </div>
+
 @endsection

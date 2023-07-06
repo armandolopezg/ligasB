@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\Admin\GameController;
 use App\Http\Controllers\Admin\PlayerController;
-use App\Http\Controllers\Admin\StandingController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermissionController;
