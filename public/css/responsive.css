@@ -164,7 +164,7 @@
         font-size: 18px;
     }
     .training .training_packages_box {
-        border-right: indianred;
+        border-right: white;
     }
     .title h2 {
         font-size: 32px;
@@ -283,10 +283,10 @@
     .training .training_packages_box h3 {
         font-size: 21px;
         line-height: 25px;
-        border-right: indianred;
+        border-right: white;
     }
     .training .training_packages_box {
-        border-right: indianred;
+        border-right: white;
     }
     .Gallery .Gallery_box {
         margin-bottom: 30px;
