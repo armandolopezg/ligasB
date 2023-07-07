@@ -1,6 +1,15 @@
 @extends('layouts.cliente')
 
 @section('content')
+<div class="row">
+    <div class="col-md-12">
+        <div class="title">
+            <h2>Primera Copa</h2>
+            <span>23 - 25 Junio</span>
+        </div>
+    </div>
+</div>
+
     <div class="row">
         <div class="col-md-12">
             <div class="title">
