@@ -456,13 +456,13 @@ ul.social_top_icon li a {
 }
 
 ul.social_top_icon li a:hover {
-    background: #ff8c00;
-    border: solid #ff8c00 1px;
+    background: #E41B13;
+    border: solid #E41B13 1px;
     color: #fff;
 }
 
 .bor_bottom {
-    border-bottom: #ff8c00 solid 1px;
+    border-bottom: #E41B13 solid 1px;
 }
 
 .banner_main {
@@ -486,7 +486,7 @@ ul.social_top_icon li a:hover {
     font-size: 224px;
     line-height: 40px;
     text-transform: uppercase;
-    color: #eb622c;
+    color: #e41b13; 
 }
 
 .bold_text_black {
@@ -552,7 +552,7 @@ ul.social_top_icon li a:hover {
 }
 
 .yellow_box {
-    background: #ff8c00;
+    background: #E41B13;
 }
 
 
@@ -584,7 +584,7 @@ ul.social_top_icon li a:hover {
     font-size: 56px;
     font-weight: 500;
     line-height: 46px;
-    color: #ff8c00;
+    color: #E41B13;
     padding-bottom: 20px;
     text-transform: uppercase;
 }
@@ -622,7 +622,7 @@ ul.social_top_icon li a:hover {
 }
 
 .training_packages_bg {
-    background: #ff8c00;
+    background: #E41B13;
     padding: 80px 0px;
 }
 
@@ -703,7 +703,7 @@ ul.social_top_icon li a:hover {
     font-size: 60px;
     font-weight: 500;
     line-height: 46px;
-    color: #ff8c00;
+    color: #E41B13;
     padding-bottom: 20px;
     text-transform: uppercase;
 }
@@ -754,7 +754,7 @@ ul.social_top_icon li a:hover {
     font-size: 60px;
     font-weight: 500;
     line-height: 46px;
-    color: #ff8c00;
+    color: #E41B13;
     text-transform: uppercase;
     padding: 0;
 }
@@ -771,7 +771,7 @@ ul.social_top_icon li a:hover {
 .main_form {
     position: absolute;
     z-index: 990;
-    background: #ff8c00;
+    background: #E41B13;
     margin-top: -94px;
     padding: 60px 100px;
 }
@@ -821,7 +821,7 @@ ul.social_top_icon li a:hover {
 /** footer **/
 
 .copyright {
-    background: #eb622c;
+    background: #E41B13;
 }
 
 .copyright p {
@@ -872,7 +872,7 @@ ul.social_icon li a {
 ul.social_icon li a:hover {
     background: #000;
     border: solid #000 1px;
-    color: #ff8c00;
+    color: #E41B13;
 }
 
 
@@ -964,13 +964,13 @@ ul.social_icon li a:hover {
 
 #sidebar ul li a:hover {
     color: #fff;
-    background: #ff8c00;
+    background: #E41B13;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #ff8c00;
+    background: #E41B13;
 }
 
 a[data-toggle="collapse"] {
